@@ -1,3 +1,6 @@
 *.sqlite
 *.xlsx
 .ipynb_checkpoints
+env/*
+.idea
+*.egg-info*
