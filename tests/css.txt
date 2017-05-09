@@ -1,0 +1,30 @@
+Steps to Create Custom Xpath
+**************************************
+
+Syntax:
+//tagname[@attribute='value']
+
+HTML Code:
+<input id="pass" class="inputtext" name="pass" tabindex="2" type="password"/>
+
+Understand the HTML Code:
+tagname=input
+id=pass
+class=inputtext
+name=pass
+tabindex=2
+type=password
+
+Example:
+//input[@name='pass']
+
+Steps to Create CSS
+**************************
+Syntax:
+tagname[attribute='value']
+
+HTML Code:
+<input id="email" class="inputtext" name="email" value="" tabindex="1" type="email"/>
+
+Example:
+input[id='email']

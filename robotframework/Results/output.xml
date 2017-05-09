@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.5.0 on darwin)" generated="20170509 11:00:27.436">
+<suite id="s1" name="Amazon" source="/Users/pellok/pyfinance/robotframework/Tests/amazon.robot">
+<test id="s1-t1" name="Navigating to amazon.in">
+<kw name="Open Browser">
+<arguments>
+<arg>http://www.amazon.in gc</arg>
+</arguments>
+<msg timestamp="20170509 11:00:27.469" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status endtime="20170509 11:00:27.469" status="FAIL" starttime="20170509 11:00:27.469"></status>
+</kw>
+<doc>opening amazon.in website</doc>
+<tags>
+<tag>sanity</tag>
+</tags>
+<status critical="yes" endtime="20170509 11:00:27.470" status="FAIL" starttime="20170509 11:00:27.467">No keyword with name 'Open Browser' found.</status>
+</test>
+<doc>This is some info about the test cases(Test suit)</doc>
+<status endtime="20170509 11:00:27.471" status="FAIL" starttime="20170509 11:00:27.439"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">sanity</stat>
+</tag>
+<suite>
+<stat fail="1" pass="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170509 11:00:27.434" level="ERROR">Error in file '/Users/pellok/pyfinance/robotframework/Tests/amazon.robot': Non-existing setting 'Library Selenium2Library'.</msg>
+</errors>
+</robot>
