@@ -16,21 +16,20 @@ from datetime import timedelta
 
 
 def get_csv(word):
+    """
+    下載csv 到chrome瀏覽器預設的下載目錄，修改檔名，移動到指定資料夾內
+    :param word:
+    :return:
+    """
     driver = webdriver.Chrome()
     driver.implicitly_wait(30)
     base_url = "https://trends.google.com.tw/trends/explore?date=2012-05-06%202017-04-23&q="+word
     verificationErrors = []
     accept_next_alert = True
-
     driver.get(base_url)
     driver.find_element_by_css_selector(".widget-actions-menu").click()
     driver.find_element_by_xpath("//button[3]").click()
     driver.close()
-
-
-
-
-
 
 def get_yahoo(number):
     yahoo_d = pandas_datareader.DataReader(number, data_source='yahoo',
@@ -40,8 +39,8 @@ def get_yahoo(number):
     return yahoo_d
 
 
-def merge_csv_and_yahoo(yahoo):
-    csv = pandas.read_csv('data/multiTimeline.csv', header=1, index_col=['週'], parse_dates=True)
+def merge_csv_and_yahoo(csv_path,yahoo):
+    csv = pandas.read_csv(csv_path, header=1, index_col=['週'], parse_dates=True) # 'data/multiTimeline.csv'
     results = yahoo.merge(csv, left_index=True, right_index=True, how='inner')
     data = results[['Close', 'iphone: (全球)']]
     return data

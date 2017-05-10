@@ -17,6 +17,11 @@ requires = [
     'transaction',
     'zope.sqlalchemy',
     'waitress',
+    'selenium',
+    'pandas==0.19.2',
+    'pandas_datareader',
+    'requests',
+    'matplotlib'
     ]
 
 tests_require = [
